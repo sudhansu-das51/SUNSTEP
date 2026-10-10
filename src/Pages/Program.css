@@ -1,0 +1,296 @@
+/* ========================================================
+   PROGRAM PAGE STYLES (KIDZEE CLEAN & PLAYFUL THEME)
+   Warm Card Accents • Routine Photos • Doodles • Zero Black Strokes
+   ======================================================== */
+
+.program-page {
+  background-color: var(--color-bg, #fffdf9);
+}
+
+/* 1. PROGRAMS GRID SECTION */
+.program-cards-section {
+  padding: 84px 0;
+  background-color: var(--color-bg-secondary, #f8f3ed);
+}
+
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 36px;
+}
+
+/* Program Card */
+.program-card {
+  background-color: #ffffff;
+  border-radius: var(--radius-lg, 30px);
+  padding: 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.program-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Individual card tone borders */
+.program-card-yellow { border-top: 5px solid var(--color-yellow); }
+.program-card-blue   { border-top: 5px solid var(--color-blue); }
+.program-card-purple { border-top: 5px solid var(--color-purple); }
+.program-card-orange { border-top: 5px solid var(--color-orange); }
+
+/* Card Header */
+.program-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.program-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-sm, 14px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.program-card-title-group {
+  margin-bottom: 14px;
+}
+
+.program-card-title {
+  font-size: 2.2rem;
+  color: var(--color-text);
+  margin-bottom: 4px;
+}
+
+.program-tag-label {
+  font-size: 0.86rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.program-card-desc {
+  font-size: 1.08rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin-bottom: 24px;
+}
+
+/* Image Frame */
+.program-card-image {
+  width: 100%;
+  height: 210px;
+  border-radius: var(--radius-md, 20px);
+  overflow: hidden;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.program-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.program-card:hover .program-card-image img {
+  transform: scale(1.03);
+}
+
+/* Bullets */
+.program-bullets-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.program-bullet-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.program-bullet-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Time & CTA Row */
+.program-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.program-time-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.program-time-badge svg {
+  color: var(--color-purple);
+}
+
+/* 2. DAILY ROUTINE SECTION (Now with photos!) */
+.program-routine-section {
+  padding: 96px 0;
+  background-color: var(--color-bg, #fffdf9);
+  position: relative;
+}
+
+.program-routine-header {
+  text-align: center;
+  max-width: 660px;
+  margin: 0 auto 56px;
+}
+
+.program-routine-header h2 {
+  font-size: 2.7rem;
+  color: var(--color-text);
+  margin-top: 14px;
+  margin-bottom: 12px;
+}
+
+.program-routine-header p {
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+}
+
+.program-routine-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+}
+
+.program-routine-card {
+  background-color: #ffffff;
+  border-radius: var(--radius-lg, 26px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.program-routine-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.program-routine-img-wrap {
+  width: 100%;
+  height: 160px;
+  position: relative;
+  overflow: hidden;
+}
+
+.program-routine-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.program-routine-card:hover .program-routine-img-wrap img {
+  transform: scale(1.05);
+}
+
+.program-routine-step-num {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.program-routine-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.program-routine-time {
+  font-size: 0.86rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+  color: var(--color-purple);
+}
+
+.program-routine-card h3 {
+  font-size: 1.32rem;
+  margin-bottom: 10px;
+  line-height: 1.25;
+  color: var(--color-text);
+}
+
+.program-routine-card p {
+  font-size: 0.96rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .program-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .program-routine-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .program-card {
+    padding: 26px 20px;
+    border-radius: var(--radius-md);
+  }
+  .program-routine-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

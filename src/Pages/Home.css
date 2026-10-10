@@ -1,0 +1,615 @@
+/* ========================================================
+   HOME PAGE STYLES (KIDZEE CLEAN & PLAYFUL THEME)
+   Warm Canvas • 4-Photo Collage • Static Doodles • Rich Images
+   ======================================================== */
+
+/* 1. HERO SECTION */
+.home-hero-section {
+  padding: 68px 0 92px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #fffdf8 0%, #faf5ed 100%);
+}
+
+/* Static Doodles (Zero animation, strictly in place) */
+.doodle-star-1 {
+  top: 36px;
+  left: 3%;
+}
+
+.doodle-star-2 {
+  top: 50px;
+  right: 6%;
+}
+
+.doodle-heart-1 {
+  top: 140px;
+  right: 2%;
+}
+
+.doodle-circle-pink {
+  top: 80px;
+  left: 45%;
+}
+
+.doodle-circle-yellow {
+  top: 30px;
+  right: 32%;
+}
+
+.doodle-circle-blue {
+  bottom: 80px;
+  left: 2%;
+}
+
+.doodle-circle-purple {
+  bottom: 60px;
+  right: 42%;
+}
+
+.home-hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1.1fr;
+  align-items: center;
+  gap: 52px;
+  position: relative;
+  z-index: 2;
+}
+
+.home-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.home-hero-badge {
+  margin-bottom: 22px;
+}
+
+.home-hero-headline {
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.15;
+  margin-bottom: 22px;
+  letter-spacing: -0.01em;
+}
+
+.home-hero-headline .home-highlight {
+  color: var(--color-orange);
+}
+
+.home-hero-subtext {
+  font-size: 1.2rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+  margin-bottom: 34px;
+  max-width: 530px;
+}
+
+/* Actions wrap with hand-drawn curve arrow */
+.home-hero-actions-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.home-hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 38px;
+}
+
+.doodle-curve-arrow {
+  position: absolute;
+  top: 48px;
+  left: 170px;
+  opacity: 0.75;
+}
+
+/* Trust Points */
+.home-trust-points {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+  width: 100%;
+}
+
+.home-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 0.98rem;
+  color: var(--color-text);
+}
+
+.home-trust-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: var(--color-green-soft);
+  color: var(--color-green);
+}
+
+/* ========================================================
+   HERO 4-PHOTO COLLAGE (1 TOP RECTANGLE + 3 BOTTOM SQUARES)
+   ======================================================== */
+.home-hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-collage-wrap {
+  width: 100%;
+  max-width: 540px;
+  position: relative;
+}
+
+/* Color Backplate Classes */
+.card-backing-lavender { background-color: #f1e9ff; }
+.card-backing-yellow   { background-color: #fff9e6; }
+.card-backing-mint     { background-color: #eaf7f0; }
+.card-backing-pink     { background-color: #ffeef6; }
+.card-backing-cream    { background-color: #fffdf9; }
+
+/* Top Rectangle Photo Card */
+.hero-collage-top {
+  border-radius: var(--radius-xl, 36px);
+  padding: 14px;
+  box-shadow: 0 16px 40px rgba(100, 28, 140, 0.1);
+  border: 1px solid rgba(100, 28, 140, 0.08);
+  transition: transform var(--transition-fast);
+}
+
+.hero-collage-top:hover {
+  transform: translateY(-3px);
+}
+
+.hero-collage-img-frame {
+  width: 100%;
+  height: 230px;
+  border-radius: var(--radius-lg, 28px);
+  overflow: hidden;
+}
+
+.hero-collage-img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.hero-collage-top:hover .hero-collage-img-frame img {
+  transform: scale(1.03);
+}
+
+.hero-collage-top-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 8px 4px;
+}
+
+.hero-top-text {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-purple);
+}
+
+/* 3 Squares Row Equally Aligned Underneath */
+.hero-collage-squares-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.hero-collage-sq {
+  border-radius: var(--radius-lg, 28px);
+  padding: 10px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform var(--transition-fast);
+}
+
+.hero-collage-sq:hover {
+  transform: translateY(-3px);
+}
+
+.hero-sq-img-frame {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-md, 20px);
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.hero-sq-img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.hero-collage-sq:hover .hero-sq-img-frame img {
+  transform: scale(1.05);
+}
+
+.hero-sq-label {
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-text);
+  text-align: center;
+}
+
+/* Floating 500+ Happy Kids Badge */
+.home-float-badge {
+  position: absolute;
+  bottom: -22px;
+  left: 20px;
+  background-color: #ffffff;
+  padding: 12px 20px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 14px 36px rgba(100, 28, 140, 0.15);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  z-index: 5;
+  transition: transform var(--transition-fast);
+}
+
+.home-float-badge:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(100, 28, 140, 0.2);
+}
+
+.home-float-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: var(--color-yellow-soft);
+  color: var(--color-yellow-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-float-val {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--color-purple);
+  line-height: 1;
+}
+
+.home-float-lbl {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ========================================================
+   2. ABOUT SECTION
+   ======================================================== */
+.home-about-section {
+  padding: 100px 0;
+  background-color: var(--color-cream, #fff7eb);
+  position: relative;
+}
+
+.doodle-about-squiggle {
+  top: 40px;
+  right: 5%;
+}
+
+.doodle-about-dot {
+  bottom: 60px;
+  left: 4%;
+}
+
+.home-about-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 64px;
+}
+
+.home-about-visual {
+  position: relative;
+}
+
+.home-about-card {
+  background-color: #ffffff;
+  padding: 18px 18px 24px;
+  border-radius: var(--radius-lg, 30px);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-border);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.home-about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.home-about-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3.2;
+  border-radius: var(--radius-md, 22px);
+  overflow: hidden;
+  margin-bottom: 18px;
+  background-color: var(--color-yellow-soft);
+}
+
+.home-about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-about-caption-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-purple);
+  margin-bottom: 4px;
+}
+
+.home-about-caption-sub {
+  font-size: 0.94rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+/* Secondary mini accent card */
+.home-about-mini-accent-card {
+  position: absolute;
+  bottom: -24px;
+  right: -24px;
+  background-color: #ffffff;
+  padding: 12px 18px;
+  border-radius: var(--radius-md, 20px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  z-index: 3;
+}
+
+.home-about-mini-thumb {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.home-about-mini-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-mini-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-green-dark);
+}
+
+.home-mini-sub {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.home-about-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-about-badge {
+  margin-bottom: 16px;
+}
+
+.home-about-heading {
+  font-size: 2.7rem;
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+
+.home-about-p {
+  font-size: 1.12rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  margin-bottom: 18px;
+}
+
+.home-about-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.home-about-chip {
+  padding: 8px 18px;
+  font-size: 0.95rem;
+}
+
+/* ========================================================
+   3. FACILITIES SECTION (6 Colorful Cards with Photos)
+   ======================================================== */
+.home-fac-section {
+  padding: 96px 0;
+  background-color: var(--color-bg, #fffdf9);
+}
+
+.home-fac-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 56px;
+}
+
+.home-fac-badge {
+  margin-bottom: 14px;
+}
+
+.home-fac-header h2 {
+  font-size: 2.7rem;
+  color: var(--color-text);
+  margin-bottom: 14px;
+}
+
+.home-fac-header p {
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+}
+
+/* Facilities 6-Card Grid */
+.home-fac-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.home-facility-card {
+  border-radius: var(--radius-lg, 28px);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.home-facility-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Card Pastels */
+.facility-card-yellow   { background-color: #fff9e6; }
+.facility-card-mint     { background-color: #eaf7f0; }
+.facility-card-lavender { background-color: #f1e9ff; }
+.facility-card-peach    { background-color: #fff1eb; }
+.facility-card-sky      { background-color: #edf4ff; }
+
+.home-facility-photo-wrap {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-facility-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.home-facility-card:hover .home-facility-photo-wrap img {
+  transform: scale(1.05);
+}
+
+.home-facility-tag {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+}
+
+.home-facility-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.home-facility-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm, 14px);
+  background-color: #ffffff;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.home-facility-body h3 {
+  font-size: 1.45rem;
+  color: var(--color-text);
+  margin-bottom: 10px;
+}
+
+.home-facility-body p {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .home-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .home-hero-headline {
+    font-size: 2.8rem;
+  }
+  .home-about-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .home-fac-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .doodle-curve-arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-hero-section {
+    padding: 44px 0 64px;
+  }
+  .home-hero-headline {
+    font-size: 2.2rem;
+  }
+  .hero-collage-top .hero-collage-img-frame {
+    height: 180px;
+  }
+  .hero-collage-squares-row {
+    gap: 10px;
+  }
+  .home-float-badge {
+    left: 8px;
+    bottom: -16px;
+    padding: 8px 14px;
+  }
+  .home-about-mini-accent-card {
+    right: 0;
+    bottom: -18px;
+  }
+  .home-fac-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,190 @@
+/* ========================================================
+   NAVBAR COMPONENT STYLES (KIDZEE CLEAN & PLAYFUL THEME)
+   ======================================================== */
+
+.navbar-header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: rgba(255, 253, 249, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 4px 20px rgba(100, 28, 140, 0.04);
+  transition: background-color var(--transition-fast);
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 84px;
+}
+
+/* Brand & Logo */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform var(--transition-fast);
+}
+
+.navbar-brand:hover {
+  transform: scale(1.02);
+}
+
+.navbar-logo-img {
+  height: 52px;
+  width: auto;
+  max-width: 190px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Desktop Links */
+.navbar-nav-desktop {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-link {
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  font-weight: 600;
+  color: var(--color-text);
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  transition: color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--color-purple);
+  background-color: var(--color-lavender);
+}
+
+.nav-link-active {
+  background-color: var(--color-lavender) !important;
+  color: var(--color-purple) !important;
+  font-weight: 700;
+}
+
+.btn-nav-active {
+  background-color: var(--color-orange-dark) !important;
+}
+
+/* Mobile Hamburger Button */
+.navbar-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 8px;
+  background: var(--color-lavender);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.burger-bar {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-purple);
+  border-radius: 2px;
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+.burger-open .burger-bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.burger-open .burger-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-open .burger-bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile Drawer */
+.navbar-drawer {
+  display: none;
+  background-color: #ffffff;
+  border-bottom: 2px solid var(--color-border);
+  box-shadow: 0 12px 32px rgba(100, 28, 140, 0.08);
+}
+
+@media (max-width: 920px) {
+  .navbar-nav-desktop,
+  .navbar-actions-desktop {
+    display: none;
+  }
+
+  .navbar-burger {
+    display: flex;
+  }
+
+  .navbar-drawer {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s cubic-bezier(0, 1, 0, 1);
+  }
+
+  .drawer-open {
+    max-height: 490px;
+    transition: max-height 0.25s ease-in-out;
+  }
+
+  .drawer-inner {
+    padding: 24px 24px 28px;
+  }
+
+  .drawer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .drawer-link {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-text);
+    padding: 12px 18px;
+    border-radius: var(--radius-sm);
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    background: var(--color-bg-secondary);
+    transition: background-color var(--transition-fast), color var(--transition-fast);
+  }
+
+  .drawer-link:hover,
+  .drawer-link-active {
+    background-color: var(--color-lavender);
+    color: var(--color-purple);
+  }
+
+  .drawer-cta-link {
+    background-color: var(--color-orange);
+    color: #ffffff !important;
+    font-weight: 700;
+    margin-top: 8px;
+    justify-content: center;
+    box-shadow: var(--shadow-orange-btn);
+  }
+
+  .drawer-contact-quick {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-border);
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+}

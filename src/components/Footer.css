@@ -1,0 +1,232 @@
+/* ========================================================
+   FOOTER COMPONENT STYLES (KIDZEE CLEAN & PLAYFUL THEME)
+   Deep Purple Background • Bright Gold Accents • No Black Strokes
+   ======================================================== */
+
+.footer-section {
+  background-color: var(--color-purple-dark, #471066);
+  color: #ffffff;
+  padding-top: 80px;
+  padding-bottom: 36px;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-section::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(254, 194, 0, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr 1fr 1.2fr;
+  gap: 48px;
+  margin-bottom: 56px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Col 1: Brand */
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  margin-bottom: 22px;
+  transition: transform var(--transition-fast);
+}
+
+.footer-brand:hover {
+  transform: scale(1.02);
+}
+
+.footer-logo-card {
+  background: #ffffff;
+  padding: 8px 18px;
+  border-radius: var(--radius-md, 18px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.footer-brand:hover .footer-logo-card {
+  box-shadow: 0 6px 22px rgba(254, 194, 0, 0.25);
+}
+
+.footer-logo-img {
+  height: 44px;
+  width: auto;
+  max-width: 170px;
+  object-fit: contain;
+  display: block;
+}
+
+.footer-tagline {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-bottom: 24px;
+  max-width: 320px;
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border: none;
+  transition: transform var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.footer-social-btn:hover {
+  background-color: var(--color-orange, #ff5100);
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(255, 81, 0, 0.35);
+}
+
+/* Col 2 & 3: Nav Lists */
+.footer-heading {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 22px;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 34px;
+  height: 3px;
+  background-color: var(--color-yellow, #fec200);
+  border-radius: 2px;
+}
+
+.footer-nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.98rem;
+  font-weight: 500;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+  display: inline-block;
+}
+
+.footer-link:hover {
+  color: var(--color-yellow, #fec200);
+  transform: translateX(4px);
+}
+
+/* Col 4: Contacts */
+.footer-contact-items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-contact-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.footer-contact-row svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--color-yellow, #fec200);
+}
+
+/* Bottom Copyright Bar */
+.footer-bottom {
+  padding-top: 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.footer-copy {
+  color: inherit;
+}
+
+.footer-legal {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-legal-link {
+  color: var(--color-yellow, #fec200);
+  font-weight: 600;
+  transition: opacity var(--transition-fast);
+}
+
+.footer-legal-link:hover {
+  opacity: 0.85;
+}
+
+.footer-legal-text {
+  color: inherit;
+}
+
+.footer-sep {
+  opacity: 0.4;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-section {
+    padding-top: 56px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
